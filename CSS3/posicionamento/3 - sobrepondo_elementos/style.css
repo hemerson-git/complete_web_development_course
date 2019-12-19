@@ -1,0 +1,22 @@
+div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid royalblue;
+}
+
+.conteudo-1 {
+    background-color: aquamarine;
+    position:absolute;
+    top: 80px;
+    left: 80px;
+
+    /* Com o z-index é possivel definir que vai aparecer primeiro
+    *  Caso haja z-index com o mesmo valor, a ordem do documento será seguida
+    */
+    z-index: 2;
+}
+
+.conteudo-2 {
+    background-color: blueviolet;
+    position:absolute;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções nativas de manipulação de strings</title>
+</head>
+
+<body>
+
+    <script>
+        var nome = 'Hemerson Oliveira Silva';
+
+        //propriedade length
+        console.log(nome.length);
+
+        //método charAt()
+        console.log(nome.charAt(12));
+
+        //método indexOf()
+        console.log(nome.indexOf('S'));
+
+        //método replace()
+        console.log(nome.replace('Silva', 'SILVA'));
+
+        //método substr() 1- Início do corte, 2- tamanho do corte
+        console.log(nome.substr(9, 8));
+
+        //métodos toUpperCase/ toLowerCase
+        console.log(nome.toUpperCase());
+        console.log(nome.toLowerCase());
+
+        //método trim() - remove espaços em branco das extremidades de uma string
+        console.log('    string     '.trim()); 
+    </script>
+</body>
+
+</html>

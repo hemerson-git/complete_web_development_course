@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos Estáticos e Dinamicos</title>
+</head>
+
+<body>
+    <script>
+        //notação de classe (es6)
+        class Produto {
+            constructor(descricao, preco) {
+                this.descricao = descricao;
+                this.preco = preco;
+            }
+
+            verDescricao() {
+                console.log(`Descriçã do produto: ${this.descricao}, preço: ${this.preco}`)
+            }
+        }
+
+        var produto = new Produto('Resident Evil 4', 50);
+        produto.verDescricao();
+
+        //Objeto Literal / estático
+
+        let ObjetoLiteral = {
+            descricao: 'Geladeira',
+            preco: 2500,
+            verDescricao2: function(){
+                console.log(`descrição: ${descricao}, preço: ${preco}`)
+            }
+         }
+    </script>
+</body>
+
+</html>

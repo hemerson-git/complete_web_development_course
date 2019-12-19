@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulando CSS</title>
+
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+
+    <style>
+        .campo{
+            border: none;
+            padding: 10px;
+        }
+
+        .padrao {
+            background-color: #ccc;
+        }
+
+        .erro {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Manipulando CSS</h1>
+
+    <div id="topo">
+        <h2>Barra de navegação da aplicação</h2>
+    </div>
+    
+    <div id="topo2">
+        <h2>Barra de navegação da aplicação2</h2>
+    </div>
+
+    <div>
+        <h3>Contato</h3>
+        <hr />
+
+        <p>Nome:</p>
+        <input type="text" />
+        <br />
+
+        <p>Email:</p>
+        <input type="text" />
+        <br />
+
+        <p>Mensagem:</p>
+        <textarea></textarea>
+        <br />
+
+        <button type="button">Enviar</button>
+    </div>
+
+    <script>
+        /*MANIPULANDO CSS
+        *********************************************************************************/
+
+        //(elemento).css(<atributo>, <valor>);
+        $('#topo').css('background-color', '#ccc');
+
+        //para passar mais atributos é possivel passar novamente o método css
+        $('#topo').css('background-color', '#bbb').css('padding', '5px');
+
+        //é possivel tambem passar um objeto literal para o método
+        $('#topo2').css({
+            'background-color': '#4b568c',
+            'padding': '25px',
+            'margin': '10px'
+        });
+
+        /* ADICIONANDO, REMOVENDO E VERIFICANDO CLASSES DE UM ELEMENTO HTML
+        **********************************************************************************/
+
+        //adicionando classes
+        $('input').addClass('campo padrao');
+        $('textarea').addClass('campo erro');
+
+        //verificando se o elemento possui uma classe
+        console.log($('textarea').hasClass('padrao'));
+
+        //removendo classes de um elemento
+        console.log($('textarea').removeClass('erro'));
+
+    </script>
+</body>
+
+</html>

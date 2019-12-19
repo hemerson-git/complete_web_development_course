@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pilar da Abstração Parte 2 - POO</title>
+</head>
+
+<body>
+
+    <script>
+        //um software para marcenaria
+        //Cadeira e sofá
+
+        //paradigma procedural
+        let cadeira = {};
+
+        cadeira[0] = {}
+        cadeira[0]['qtde_pernas'] = 4;
+        cadeira[0]['cor'] = 'azul';
+        cadeira[0]['giratoria'] = false;
+
+        cadeira[1] = {}
+        cadeira[1]['qtde_pernas'] = 1;
+        cadeira[1]['cor'] = 'vermelha';
+        cadeira[1]['giratoria'] = true;
+
+        function girarCadeira(indice) {
+            if (cadeira[indice]['giratoria'] === true) {
+                console.log('girou');
+            } else {
+                console.log('A cadeira não é giratória');
+            }
+        }
+
+        function adicionar_Cadeira(qtde_pernas, cor, giratoria) {
+            var cadeira = array();
+
+            cadeira['qtde_perna'] = qtde_pernas;
+            cadeira['cor'] = cor;
+            cadeira['giratoria'] = giratoria;
+        }
+
+        girarCadeira(1);
+
+        //POO
+        class Cadeira {
+            constructor(qtde_pernas, giratoria, cor) {
+                this.qtde_pernas = qtde_pernas;
+                this.giratoria = giratoria;
+                this.cor = cor;
+            }
+
+            girarCadeira() {
+                if (this.giratoria === true) {
+                    console.log('girou')
+                } else {
+                    console.log('A cadeira não é giratória')
+                }
+            }
+        }
+
+        let cadeira2 = new Cadeira(4, false, 'white');
+        console.table(cadeira2)
+    </script>
+</body>
+
+</html>

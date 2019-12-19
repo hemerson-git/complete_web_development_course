@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperando e manipulando conteúdo interno do HTML </title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Recuperando e manipulando conteúdo interno do HTML</h1>
+
+    <div id="div-1" style="height: 100px; width: 100px; border: 1px solid black">Div 1</div>
+    <div id="div-2" style="height: 100px; width: 100px; border: 1px solid black">Div 2</div>
+
+    <script>
+        $('document').ready(() => {
+            //injetando HTML no elemento
+            $('#div-1').html('<strong>Eu sou o valor novo</strong>');
+
+            //injetando texto no elemento --> o conteudo HTML irá ser escapado
+            $('#div-2').text('<strong>Eu sou o valor novo</strong>');
+        });
+    </script>
+</body>
+
+</html>

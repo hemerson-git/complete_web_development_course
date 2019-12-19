@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays - Ordenação de elementos</title>
+</head>
+<body>
+    <h1>Arrays - Ordenação de elementos</h1>
+
+    <script>
+        var lista_fruta = ['Maçã', 'Uva', 'Banana', 'Morango'];
+
+        //Método de ordenação de arrays
+        //Só funciona bem com ordenação alfanúmerica
+
+        console.log(lista_fruta.sort());
+
+
+        // NO CASO DE ARRAY COM ELEMENTOS NUMÉRICOS
+        var lista_numeros = [12, 3, 56, 45, 19, 1];
+
+        console.log(lista_numeros.sort(ordenaNumeros));
+
+        function ordenaNumeros(a, b){
+            return a - b;
+        }
+        
+    </script>
+</body>
+</html>

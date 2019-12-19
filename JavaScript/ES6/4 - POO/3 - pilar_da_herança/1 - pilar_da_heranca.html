@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pilar da Herança</title>
+</head>
+
+<body>
+    <script>
+        class Animal{
+            constructor() {
+                this.cor = '';
+                this.tamanho = null;
+            }
+
+            dormir (){
+                console.log('Dormir');
+            }
+        }
+
+        class Cachorro extends Animal {
+            constructor (){
+                super();
+                this.orelhas = 'Grandes e caídas';
+            }
+
+            correr () {
+                console.log('Correr');
+            }
+
+            rosnar () {
+                console.log('Rosnar');
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor () {
+                super();
+                this.bico = 'curto'
+            }
+
+            voar () {
+                console.log('Voar');
+            }
+        }
+
+        class Papagaio extends Passaro {
+            constructor () {
+                super();
+                this.sabeFalar = true;
+            }
+        }
+
+        let cachorro = new Cachorro;
+        let passaro = new Passaro;
+        let papagaio = new Papagaio;
+
+        cachorro.rosnar();
+        passaro.dormir();
+        papagaio.dormir();
+        console.log(papagaio.sabeFalar);
+    </script>
+</body>
+</html>

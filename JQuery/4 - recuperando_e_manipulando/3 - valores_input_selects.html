@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperando e manipulando inputs (text) e selects</title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Recuperando e manipulando inputs (text) e selects</h1>
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="Hemerson">
+
+    <label for="origem">origem</label>
+    <select name="origem" id="origem">
+        <option value="1">Google</option>
+        <option value="2" selected>Facebook</option>
+        <option value="3">Rádio</option>
+        <option value="4">Outros meios</option>
+    </select>
+    <script>
+        console.log($('#nome').val(), $('#origem').val())
+    </script>
+</body>
+
+</html>

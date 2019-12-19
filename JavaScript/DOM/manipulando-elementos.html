@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulando elementos do DOM</title>
+</head>
+<body>
+    <h1>Manipulando elementos do DOM</h1>
+    
+    <input type="text" name="" id="caracter" onkeyup="verificaTipoCaracter()">
+    <hr>
+    <label for="numeros">Números</label>
+    <input type="text" name="" id="numeros" disabled>
+
+    <label for="letras">Letras</label>
+    <input type="text" name="" id="letras" disabled>
+
+    <script>
+        function verificaTipoCaracter(){
+            var caracter = document.getElementById('caracter').value;
+
+            if(isNaN(caracter)){
+                console.log('Não é um numero');
+                addLetter(caracter);
+            } else {
+                console.log('É um número');
+                addNumber(caracter);
+            }
+
+            clearTextField();
+        }
+
+        function clearTextField(){
+            document.getElementById('caracter').value = '';
+        }
+        
+        function addNumber(numero){
+            document.getElementById('numeros').value += numero;
+        }
+
+        function addLetter(letra){
+            document.getElementById('letras').value += letra;
+        }
+    </script>
+</body>
+</html>

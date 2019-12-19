@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperando e manipulando Checkbox/radios e loops com $.(each)</title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Recuperando e manipulando Checkbox/radios e loops com $.(each)</h1>
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="Hemerson">
+
+    <label for="origem">origem</label>
+    <select name="origem" id="origem">
+        <option value="1">Google</option>
+        <option value="2" selected>Facebook</option>
+        <option value="3">Rádio</option>
+        <option value="4">Outros meios</option>
+    </select>
+
+    <hr>
+
+    <p>Sexo: </p>
+    <input type="radio" name="sexo" value="f" class="sexo" id="fem"><label for="fem"> Feminino </label><br>
+    <input type="radio" name="sexo" value="m" class="sexo" id="masc" checked><label for="masc"> Masculino </label><br>
+
+    <p>Interesses: </p>
+    <input type="checkbox" name="interesse" class="interesse" id="php" value="php"><label for="php">PHP</label><br>
+    <input type="checkbox" name="interesse" checked class="interesse" id="js" value="js"><label for="js">JavaScript</label> <br>
+    <input type="checkbox" name="interesse" checked class="interesse" id="angular" value="angular"><label for="angular">Angular</label> <br>
+    <input type="checkbox" name="interesse" class="interesse" id="node" value="node"> <label for="node">Node</label><br>
+
+    <script>
+        console.log($('.sexo:checked').val());
+
+        //$.each(array, callback)
+        $.each($('.interesse:checked'), (indice, valor) => {
+            console.log(indice, valor.value);
+        });
+
+    </script>
+</body>
+
+</html>

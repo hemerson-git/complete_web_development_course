@@ -1,0 +1,32 @@
+html,
+body,
+.container {
+    height: 100%;
+}
+
+html {
+    cursor: url('../imagens/mata_mosca.png') 30 30, auto;
+}
+
+body {
+    background: url('../imagens/bg.jpg') center center fixed no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.nivel-select {
+    background-color: #ccc;
+    opacity: .85;
+    color: white;
+    width: 35%;
+    border-radius: 10px;
+    padding: 20px
+}
+
+.nivel-select:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur('5px');
+}

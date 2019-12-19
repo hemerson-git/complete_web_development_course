@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de Formulários - JavaScript</title>
+</head>
+<body onresize="acao()">
+    <h1>Eventos de Fourmuláios com JavaScript</h1>
+    <input type="text" name="texto" id="texto" onblur="acao()">
+    <select name="select" id="" onchange="acao()">
+        <option value="select">Selecione uma opção</option>
+        <option value="select">Primeita opção</option>
+        <option value="select">segunda opção</option>
+    </select>
+
+    <script>
+        //onfocus -> evento disparado quando o elemento recebe o foco do cursor do mouse
+        //onblur -> evento disparado quando o elemento perde o foco do cursor
+        //onchange -> evento disparado quando o estado do elemento muda
+
+        function acao(){
+            alert('Evento disparado');
+        }
+    </script>
+</body>
+</html>

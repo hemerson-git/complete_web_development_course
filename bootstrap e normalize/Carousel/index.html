@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrousel</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+
+<body>
+    <section class="container-fluid bg-carousel">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="inner-carousel" id="main">
+                <div class="carousel-item active">
+                    <h1>teste</h1>
+                    <p>Lorem ipsum....</p>
+                    <img src="assets/images/imagem1.jpeg" class="image-fluid">
+                </div>
+                <div class="carousel-item">
+                    <h1>teste 2</h1>
+                    <p>Lorem ipsum....</p>
+                    <img src="assets/images/imagem2.jpeg" class="image-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>carousel com controlers</h1>
+        <div class="container-fluid bg-carousel">
+            <div id="carousel-controle" class="carousel slide" data-ride="carousel"><!--carousel-->
+                <div class="inner-carousel"> <!--Inner-->
+                    <div class="carousel-item active">
+                        <img src="assets/images/imagem2.jpeg" class="image-fluid">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/images/imagem3.jpeg" class="image-fluid">
+                    </div>
+                </div> <!--/Inner-->
+                <a href="#carousel-controle" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+
+                <a href="#carousel-controle" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div> <!--/carousel-->
+        </div>
+    </section>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Navegando entre elementos HTML</title>
+        <script src="assets/JS/jquery-3.4.1.min.js"></script>
+	</head>
+
+	<body>
+	
+		<div id="topo">
+			<ul class="menu">
+				<li class="item"></li>
+				<li class="item"></li>
+			</ul>
+		</div>
+
+		<div id="pagina">
+			<div class="secao1">
+				<div class="subSecao"></div>
+			</div>
+			
+			<div class="secao2">
+				<h1></h1>
+			</div>
+		</div>		
+		
+		<div id="rodape">
+			<div>
+				<p></p>	
+				<span id="opcao1"></span>
+			</div>
+		</div>
+
+        <script>
+            //seleciona o item pai do elemento selecionado
+            console.log($('div.secao1').parent());
+
+            //seleciona o primeiro elemento pai
+            console.log($('subSecao').closest('#pagina'));
+
+            //procura por um filho do elemento selecionado
+            console.log($('#topo').find('.item'));
+        </script>
+
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Configurações do Babel</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        //3 escopos: Global, Função e Bloco.
+        //o var sempre sofre Hoisting, indo pra um nível logo acima do escopo onde foi declarada;
+        //No caso do let o escopo é preservado 
+
+        var serie = 'Friends';
+        function x (){
+            var serie = 'Game of thrones';
+            console.log('função: ' + serie);
+
+            if(true) {  
+                console.log('bloco dentro da função: ' + serie);
+            }
+        }
+
+        x();
+        
+        if(true) {
+            console.log(serie);
+        }
+
+        if(true) {
+            let filme = 'Nenhum sistema está a salvo';
+        }
+
+        console.log(filme);
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

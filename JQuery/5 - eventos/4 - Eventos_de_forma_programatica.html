@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Disparando eventos de forma programatica e eventos auxiliadores</title>
+	<script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<style>
+	#div1 {
+		height: 80px;
+		width: 80px;
+		border: 1px solid black;
+	}
+
+	.em_destaque {
+		background-color: aquamarine;
+		border: 2px solid aqua;
+	}
+
+</style>
+
+<body>
+	<h1>Disparando eventos de forma programatica e eventos auxiliadores</h1>
+
+	<button type="submit" id="btn-1">botão-1</button>
+	<button type="submit" id="btn-2">botão-2</button>
+
+	<div id="div1"></div>
+
+	<script>
+		$(document).ready(() => {
+			//triger() acionar eventos de forma programatica
+			//hover() função auxiliar que captura eventos do mouse
+			//toggleClass() função para auxiliar inclusão/remoção de classe
+
+			//dispara o evento do alert ao clicar no botão 2
+			$('#btn-2').on('click', () => {
+				alert('Botão clicado')
+			})
+
+			//Ao clicar no botão 1, dispara-se o evento do botão 2
+			$('#btn-1').on('click', () => {
+				$('#btn-2').trigger('click');
+			})
+
+			//faz mudanças de acordo o hver do mouse
+			$('#div1').hover(e => {
+				//verifica se o elemento possui a classe, caso sim, a remove
+				//caso não, a adiciona
+				$(e.target).toggleClass('em_destaque');
+			})
+		})
+	</script>
+</body>
+
+</html>

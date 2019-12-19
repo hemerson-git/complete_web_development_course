@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Object Model (BOM) - Screen</title>
+</head>
+<body>
+    <h1>Browser Object Model (BOM) - Screen</h1>
+
+    <script>
+        var altura = window.screen.availHeight; //apenas a altura disponível no WS
+        var largura = window.screen.availWidth; //apenas a largura disponível no WS
+        var alturaTotal = window.screen.height; //altura total da janela 
+        var larguraTotal = window.screen.width; //largura total da janela
+
+        document.write("A altura do Conteiner é de: " + altura + 'px <br>');
+        document.write("A altura da Janela é de: " + alturaTotal + 'px <br>');
+        document.write("A largura do Conteiner é de: " + largura + 'px <br>');
+        document.write("A largura da Janela é de: " + larguraTotal + 'px <br>');
+
+        if (largura < 500){
+            document.write('Lógica para impressão do menu versão mobile');
+        } else {
+            document.write('Lógica para impressão do menu versão desktop');
+        }
+    </script>
+</body>
+</html>

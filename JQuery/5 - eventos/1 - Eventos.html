@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+
+	<style>
+		#divExterna {
+			background-color: #ccc;
+			width: 80px;
+			height: 80px;
+		}
+	</style>
+
+	<script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+	<div id="topo">
+		<h1>Eventos</h1>
+	</div>
+
+	<div>
+		<h3>Browser</h3>
+		<span>Onload: </span><span id="onload">?</span><br />
+		<span>Scroll: </span><span id="scroll">?</span><br />
+		<span>resize window: </span><span id="resize">?</span>
+		<hr />
+
+		<h3>Mouse</h3>
+		<button type="button" id="btn1">Clique aqui</button>
+		<button type="button" id="btn2">Clique aqui 2x</button>
+		<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px">
+		</div>
+		<span>Resultado do evento sobre a div</span> <span id="resultado"></span>
+		<hr>
+
+		<div id="divExterna"></div>
+		<span>Resultado div externa: <span id="resultado2"></span> </span>
+		<hr />
+
+		<h3>Teclado</h3>
+		<span>Nome:</span>
+		<input type="text" id="teclado" />
+		<span id="resultadoTecla">Resultado do evento sobre o input</span>
+		<hr />
+
+		<h3>Teclado 2</h3>
+		<span>Nome:</span>
+		<input type="text" id="teclado2" />
+		<span id="resultadoTecla2">Resultado do evento sobre o input</span>
+		<hr />
+
+		<h3>Formulário</h3>
+		<form id="form">
+			<span>Nome:</span>
+			<input type="text" id="nome" />
+
+			<span>E-mail:</span>
+			<input type="text" id="email" />
+
+			<span>Motivo do contato:</span>
+			<select id="options">
+				<option value="">-- Selecione --</option>
+				<option value="duvida">Dúvida</option>
+				<option value="sugestao">Sugestão</option>
+			</select>
+
+			<button type="submit">Enviar</button>
+		</form>
+	</div>
+
+	<script>
+		/* WINDOW
+		 ****************************************************************/
+		$(document).ready(() => {
+			//Evento disparado ao carregar a página 
+			$('#onload').html('Página carregada')
+
+			//Evento disparado ao rolar a página
+			$(window).scroll(() => {
+				$('#scroll').html('O scroll foi acionado')
+			})
+
+			//Evento disparado ao redimensionar a tela
+			$(window).resize(() => {
+				$('#resize').html('A tela foi redimensionada')
+			})
+		})
+
+		/* MOUSE
+		 *****************************************************************/
+
+		//A combinação do evento mouseup e mousedown é equivalente ao click
+		//Evento dispanrado ao pressionar o botão principal do mouse
+		//Os eventos mouseenter e mouseleave NÃO pussuem efeito borbulhamento
+		//O mouseover e o mouseout, sim.
+
+		$('#btn1').mousedown(() => {
+			$('#div2').css('background-color', 'green');
+		})
+
+		//Disparado ao soltar o botão principal do mouse - pode ser substituido pelo click
+		$('#btn1').mouseup(() => {
+			$('#div2').css('background-color', 'blue')
+		})
+
+		//Disparado no duplo click do botão principal do mouse
+		$('#btn2').dblclick(() => {
+			$('#div2').css('background-color', 'purple')
+		})
+
+		//Disparado ao mover o mouse sobre o elemento
+		$('#div2').mousemove(e => {
+			$('#resultado').text('X: ' + e.offsetX + '/ y: ' + e.offsetY);
+		})
+
+		//Disparado quando o cursor do mouse entra no elemento
+		$('#divExterna').mouseenter(() => {
+			$('#resultado2').html('Entrou');
+		})
+
+		//Disparado quando o cursor do mouse sai do elemento
+		$('#divExterna').mouseout(() => {
+			$('#resultado2').html('Saiu');
+		})
+
+
+		/* TECLADO
+		 *****************************************************************/
+		//keydown & keyup
+
+		//Evento disparado quando a tecla é pressionada
+		$('#teclado').keydown(() => {
+			$('#resultadoTecla').text('A tecla foi pressionada');
+		});
+
+		//Disparado quando a tecla é liberada
+		$('#teclado').keyup(() => {
+			$('#resultadoTecla').text('A tecla foi liberada');
+		})
+
+		//Captura do código da tecla
+		$('#teclado2').keydown(e => {
+			if (e.keyCode == 13) {
+				let name = $(e.target).val()
+				$(e.target).val('')
+				$('#resultadoTecla2').text(name);
+			}
+		})
+
+		/* TECLADO
+		 *****************************************************************/
+		//blur, focus, change & submit
+
+		//Evento disparado ao campo receber foco
+		$('#nome').focus(() => {
+			console.log('Elemento recebeu foco');
+		})
+
+		//Disparado ao campo perder foco
+		$('#nome').blur(e => {
+			if ($(e.target).val() != '') {
+				let text = $(e.target).val()
+				console.log(text)
+			}
+		})
+
+		$('#options').change(e => {
+			let option = $(e.target).val()
+			console.log('A opção selecionada foi: ' + option)
+		})
+
+		$('#form').submit(e => {
+			//Evita que o comportamento padrão seja executado
+			e.preventDefault()
+			console.log('O formulário foi enviado')
+		})
+	</script>
+</body>
+
+</html>

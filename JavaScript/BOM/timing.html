@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Object Model (BOM) - Timing</title>
+</head>
+
+<body>
+    <h1>Browser Object Model (BOM) - Timing</h1>
+
+    <script>
+        //set...(<Operação>, <tempo em milissegundos>)
+        //O setTimeout realiza a operação uma vez após o tempo passado
+        setTimeout( function() { document.write('Teste Timeout <br/>') }, 2000);
+
+        setInterval( function() {document.write('Teste Interval <br/>')}, 2000); 
+    </script>
+</body>
+
+</html>

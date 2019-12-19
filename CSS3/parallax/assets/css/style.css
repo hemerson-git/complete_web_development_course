@@ -1,0 +1,72 @@
+/* Configurações padroes da página 
+--------------------------------------------*/
+
+html,
+body {
+    height: 100%;
+    font: 16px "lato", 'sans-serif';
+    margin: 0;
+    color: #777;
+}
+
+.conteudo {
+    background-color: white;
+    text-align: justify;
+    padding: 50px 80px;
+}
+
+.conteudo h3 {
+    text-align: center;
+    color: #111;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Efeito parallax
+--------------------------------------------*/
+
+.box {
+    height: 100%;
+    opacity: .7;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.box-title {
+    color: white;
+    background-color: #111;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+    padding: 18px;
+    font-size: 20px;
+}
+
+.box-1 {
+    background: url('../imagens/imagem1.jpg') center fixed /cover;
+}
+
+.box-2 {
+    background: url('../imagens/imagem2.jpg') center fixed /cover;
+}
+
+.box-3 {
+    background: url('../imagens/imagem3.jpg') center fixed /cover;
+}
+
+.box-4 {
+    background: url('../imagens/imagem4.jpg') center fixed /cover;
+}
+
+.box-5 {
+    background: url('../imagens/imagem5.jpg') center fixed /cover;
+}
+
+.box-6 {
+    background: url('../imagens/imagem6.jpg') center fixed /cover;
+}

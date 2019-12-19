@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melhorias na notação</title>
+</head>
+
+<body>
+    <script>
+        let nome = 'Hemerson'
+        let idade = 22
+        let sexo = 'Masculino'
+        let profissao = 'Desenvolvedor web'
+
+        // Notação ES5
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: () => {
+                console.log(`nome: ${this.nome}, idade: ${this.idade}, sexo: ${this.sexo}
+                            profissao: ${this.profissao}`);
+            }
+        }
+
+        // Notação ES6
+
+        let objeto = {
+            nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo() {
+                console.log(`nome: ${this.nome}, idade: ${this.idade}, sexo: ${this.sexo}
+                            profissao: ${this.profissao}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

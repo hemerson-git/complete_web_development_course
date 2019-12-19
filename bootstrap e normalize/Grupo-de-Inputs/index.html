@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Group</title>
+
+    <!-- CSS DO BOOTSTRAP -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body style="margin-bottom: 200px; padding:16px">
+    <form>
+        <h2>Group Prepend</h2>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+            </div> 
+            <input class="form-control" type="text" id="email" placeholder="email">
+        </div>
+        
+        <h2>Group Append</h2>
+        <div class="input-group">
+            <input class="form-control" type="text" id="email" placeholder="email">
+            <div class="input-group-append">
+                <span class="input-group-text">@site.com</span>
+            </div>
+        </div>
+
+        <h2>URL Personalizada</h2>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">https://site.com/usuario/</span>
+            </div>
+            <input class="form-control" type="text" placeholder="Digite sua usuário">
+        </div>
+
+        <h2>Moeda</h2>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+
+            <input class="form-control" type="text">
+
+            <div class="input-group-append">
+                <span class="input-group-text">,00</span>
+            </div>
+        </div>
+
+        <!-- 
+            Tipo: Checkbox / radio
+         -->
+        <h2>Checkbox / radio</h2>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="radio" id="radio">
+                </div>
+            </div>
+            <input class="form-control" type="text">
+        </div>
+
+        <h2>Múltiplos Inputs</h2>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">name/email</span>
+            </div>
+
+            <input class="form-control" type="text">
+            <input class="form-control" type="text">
+        </div>
+
+        <h2>Pesquisa</h2>
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Pesquisa"> 
+            <div class="input-group-append">
+                <button class="btn btn-primary">Pesqisar</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- JS DO BOOTSTRAP -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mata Mosquito</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onresize="setGameScreenSize()">
+    
+    <div id="scene"></div>
+    <div class="panel">
+        <div class="lifes">
+            <div>
+                <img id="l1" src="assets/imagens/coracao_cheio.png">
+                <img id="l2" src="assets/imagens/coracao_cheio.png">
+                <img id="l3" src="assets/imagens/coracao_cheio.png">
+            </div>
+        </div>
+
+        <div class="timer">
+            Tempo Restante: <span id="timeLeft">?</span>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>

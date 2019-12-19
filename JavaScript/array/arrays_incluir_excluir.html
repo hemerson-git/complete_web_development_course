@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays - métodos inclusão e exclusão - JavaScript</title>
+</head>
+<body>
+    <h1>Arrays - métodos de inclusão e exclusão</h1>
+
+    <script>
+        var lista_frutas = [];
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maçã';
+
+        //inclusão no final do array
+        lista_frutas.push('Morango')
+
+        //inclusão no inicio do array
+        lista_frutas.unshift('Uva');
+
+        //exclusão do final do array
+        lista_frutas.pop();
+
+        //exclusão do inicio do array
+        lista_frutas.shift()
+
+        console.log(lista_frutas)
+    </script>
+</body>
+</html>

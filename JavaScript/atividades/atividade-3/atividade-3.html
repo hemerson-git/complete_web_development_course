@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade de fixação</title>
+</head>
+
+<body>
+    <h1>Atividade 3</h1>
+    <h2>
+        1) Crie uma aplicação para efetuar cálculo aritméticos de soma e subtração.
+        Considere os seguintes critérios:
+    </h2>
+
+    <ol>
+        <li>
+            Ao executar o script a aplicação deve solicitar a entrada de um número, seguido de
+            uma operação de soma ou subtração e posteriormente seguido de um segundo
+            número.
+        </li>
+
+        <li>
+            A operação deve ser inserida pelo usuário de forma textual, ou seja, quando o sistema
+            solicita a operação o usuário deve informar o texto ‘soma’ ou ‘subtração’ (sem as
+            aspas).
+        </li>
+
+        <li>
+            Na sequência o sistema deve enviar os parâmetros para uma função efetuar o devido
+            cálculo. Exemplo: calculo(num1, num2, operacao).
+        </li>
+
+        <li>
+            A função deve executar o cálculo com base na operação informada pelo usuário e na
+            sequência deve retornar o valor encontrado.
+        </li>
+
+        <li>
+            Ao término o sistema deve fornecer a seguinte saída para o usuário:
+            “O resultado é: <span style=color:red;>resultado</span>.”
+        </li>
+
+        <p>
+            *A informação em vermelho é uma variável e deve ser substituída pelo seu respectivo valor
+            calculada dentro da aplicação.
+        </p>
+    </ol>
+
+    <h3 class="resultado"></h3>
+    <script>
+        var num1 = prompt('Digite o primeiro número: ');
+        var operacao = prompt("Informe a operação que deseja efetuar ('soma / subtração')");
+        var num2 = prompt("Digite o segundo número");
+        var resultado = realizarCalculo(num1, num2, operacao);
+        document.querySelector('.resultado').textContent = "O resultado é: " + resultado; 
+        
+
+        function realizarCalculo(num1, num2, operacao){
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+            switch (operacao){
+                case 'soma':
+                    return num1 + num2;
+                case 'subtração':
+                    return num1 - num2;
+                default:
+                    return null;
+            }
+        }
+    </script>
+</body>
+
+</html>

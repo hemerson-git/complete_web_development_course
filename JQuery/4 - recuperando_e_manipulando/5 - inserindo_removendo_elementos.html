@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inserindo e removendo elementos HTML</title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Inserindo e removendo elementos HTML</h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="lista-2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <hr id="linha">
+
+    <div id="lista-3">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <script>
+        //before, prepend, append, after, html, remove
+        $('document').ready(() => {
+            //adiciona ao final da lista
+            $('ul').append('<li>Item 4</li>');
+
+            //adiciona um item ao inicio da lista
+            $('ul').prepend('<li>Item 0</li>');
+
+            //adiciona um paragrafo abaixo das outras divs da lista 2
+            $('#lista-2').append('<p>Paragrafo inserido após as divs</p>');
+
+            //adiciona um item após o item selecionado
+            $('#lista-2').after('<div>Nova div adicionada após à selecionada');
+
+            //adiciona um item antes do item selecionado
+            $('#lista-2').before('<div>Nova div adicionada antes à selecionada');
+
+            //substitui todo o conteudo que estava innerTag
+            $('#lista-3').html('<p>Substitui todo o conteudo que estava aqui</p>');
+
+            //remove um item 
+            $('#linha').remove();
+        });
+
+    </script>
+</body>
+
+</html>

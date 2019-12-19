@@ -1,0 +1,43 @@
+body {
+    background-color: #007fc7;
+}
+
+#container {
+    background-color: #eee;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    /* mudança do posicionamento do container */
+    position: relative;
+}
+
+#container p {
+    width: 300px;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.absolute {
+    /* Top, bottom, right, left */
+    /* O Posicionamento absoluto se posiciona ao container que ele pertencer
+    ** que tenha posição diferente de "static"
+    */
+
+    position: absolute;
+    border: 1px solid red;
+    background-color: #f7f7f7;
+    top: 10px;
+    right: 10px;
+}
+
+.fixed {
+    /* Diferente do absolute, o fixed se manter parado em relação à janela do navegador */
+    border: 1px solid blue;
+    position: fixed;
+    background-color: #f7f7f7;
+    top: 0;
+    right: 50%;
+    transform: translateX(-50%);
+}

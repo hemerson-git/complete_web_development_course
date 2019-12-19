@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulando elementos do DOM</title>
+</head>
+<body>
+    <h1>Manipulando elementos do DOM</h1>
+    
+    <button type="button" onclick="changeColor('red')">Vermelho</button>
+    <button type="button" onclick="changeColor('yellow')">Amarelo</button>
+    <button type="button" onclick="changeColor('green')">Verde</button>
+
+    <div id="color" style="height: 150px; width: 150px; background-color:blue; margin: 10px;"></div>
+
+    <script>
+        function changeColor(cor){
+            document.getElementById('color').style.backgroundColor = cor;
+        }
+    </script>
+</body>
+</html>

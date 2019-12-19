@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores Spread/Rest</title>
+</head>
+<body>
+    <script>
+        //O Spread em strings espalha os caracteres, em arrays espalha seus indices 
+        //e em Objetos, seus atributos e métodos
+
+        //Com String
+        let tituloArtigo = 'Como utilizar o operador spread/rest';
+        console.log(...tituloArtigo);
+        console.log([...tituloArtigo]);
+
+        //Arrays
+        let listaCurso1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular']
+        let listaCurso2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux']
+        let listaCursosCompletos = ['Web Completo', 'Android Completo', ...listaCurso1]
+
+        console.table(listaCursosCompletos)
+
+        //Objetos
+        let pessoa = {nome: 'João', idade: 22};
+        let clone = {endereco: 'Rua João Pessoa 12', ...pessoa}
+
+        console.table(clone);
+    </script>
+</body>
+</html>

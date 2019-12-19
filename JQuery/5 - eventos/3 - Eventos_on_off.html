@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos On() e Off()</title>
+
+	<style>
+		.desfocado {
+			background-color: white;
+		}
+
+		.focado {
+			background-color: green;
+		}
+	</style>
+
+	<script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+	<h1>Eventos On() e Off()</h1>
+
+	<input type="text" class="desfocado">
+
+	<script>
+		$(document).ready(() => {
+			//seleciona o input e quando a pagina for carregada, faz a mudança das classes
+			$('input').on('focus', e => {
+				$(e.target).removeClass('desfocado').addClass('focado')
+			})
+
+			//evita que os novos elementos criados mesmo de forma programatica
+			//não receba as ações relacionadas aos eventos
+			$('body').on('blur', 'input', e => {
+				$(e.target).removeClass('focado').addClass('desfocado');
+			})
+		})
+	</script>
+</body>
+
+</html>

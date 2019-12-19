@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperando e manipulando atributos do HTML </title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1>Recuperando e manipulando atributos do HTML</h1>
+    <img src="assets/images/esfera_1.png" border="5">
+    <div style="background-color: red; width: 100px; height: 100px;"></div>
+
+    <script>
+        $('document').ready(() => {
+            //notação --> $(elemento).attr(<atributo>, <valor>)
+
+            //recuperando
+            console.log($('img').attr('src'));
+            console.log($('img').attr('border'));
+            console.log($('div').attr('style'));
+
+            //manipulando
+            $('img').attr('src', 'assets/images/esfera_2.png');
+            $('div').attr('style', 'background-color: blue; width: 140px; height: 140px;');
+        });
+    </script>
+</body>
+</html>

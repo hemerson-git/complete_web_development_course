@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring Assignment Parte 4</title>
+</head>
+<body>
+    <script>
+        //array
+        let arr = [10, 20, 30, 40];
+
+        let [a, ...b] = arr;
+
+        console.log(a);
+        console.log(b);
+
+        //Object
+        let obj = {a: 10, b: 20, c: 30, d: 40};
+
+        let {c: a, ...d} = obj;
+        console.log(c);
+        console.log(d);
+    </script>
+</body>
+</html>

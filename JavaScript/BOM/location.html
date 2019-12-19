@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Object Model (BOM) - Location</title>
+</head>
+
+<body>
+    <h1>Browser Object Model (BOM) - Location</h1>
+
+    <button type="button" onclick="window.location.href='http://www.google.com' ">Acessar Google</button>
+    <button type="button" onclick="window.location.href='http://www.faus.com.br' ">Acessar Faus</button>
+    <button onclick="recarregarPagina()">Recarregar página</button>
+    <script>
+        //força a recarga da página
+
+        function recarregarPagina(){
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>

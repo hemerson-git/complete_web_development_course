@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 5</title>
+    <script>
+        var objetos = ['Cadeira', 'Impressora', 'Garfo'];
+
+        function adicionarValor() {
+            conteudo = document.getElementById('caixa-texto').value;
+            if (conteudo == '') {
+                if (objetos.indexOf(conteudo) == -1) {
+                    objetos.push(conteudo);
+                } else {
+                    alert('O objeto já foi inserido!');
+                }
+
+            } else {
+                alert('Informe um valor válido!');
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <ol>
+        <li>
+            Crie uma aplicação web contendo um campo para entrada de texto (input text) e dois
+            botões (buttons), sendo um botão com a descrição "Adicionar" e outro com a descrição
+            "Ordenar"
+
+            Após criar os elementos de interação com o usuário acima, crie um Array de nome objetos contendo
+            os seguintes valores:
+            var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+            Os próximos passos são:
+
+            <ol>
+                <li>
+                    Ao clicar no botão "Adicionar" disparar função que irá:
+                </li>
+
+                <ul>
+                    <li>Recuperar o valor contido no campo de texto.</li>
+
+                    <li>Verificar se o valor está vazio ou preenchido.</li>
+
+                    <ul>
+                        <li>Se vazio, exibir alert com a mensagem "Informe um valor válido".</li>
+                        <li>Se preenchido:</li>
+                        <ul>
+                            <li>Verificar se o valor informado já existe dentro do Array objetos.</li>
+                            <li>Se existir, exibir alert com a mensagem "Objeto já foi adicionado".</li>
+                            <li>Se não existir:</li>
+                            <ul>
+                                <li>Incluir o valor preenchido no campo dentro do Array</li>
+                                <li>Efetuar um console.log do Array para debug (checar se está
+                                    funcionado).</li>
+                                <li>Limpar o valor contido no campo de entrada de texto.</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+
+                <li>
+                    Ao clicar no botão "Ordenar" disparar função que irá:
+
+                    <ul>
+                        <li>Ordenar de forma alfabética os valores do Array de objetos.</li>
+                        <li>Efetuar um console.log do Array para debug (checar se está funcionado).</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+
+    <!-- Inicio da execução do exercicio -->
+    <h2>Exercício</h2>
+    <form>
+        <input type="text" id="objeto">
+        <button onclick="adicionarValor()">Adicionar</button>
+        <button>Ordenar</button>
+
+    </form>
+</body>
+
+</html>

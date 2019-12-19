@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sequencia de execução</title>
+    <script src="assets/JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1>Sequência de execução e $('document').ready()</h1>
+
+    <div>Item 1</div>
+    <div class="div2">Item 2</div>
+
+    <script>
+        //NOS DOIS CASOS SÃO USADOS FUNÇÕES DE CALLBACK 
+
+        //sintaxe 1 - Mais comum
+        // $('document').ready(function teste(){
+        //     console.log($('div'));
+        // });
+
+        //sintaxe 2
+        $(function() {
+            console.log($('div'));
+        });
+
+        //Sintaxe 3
+        $(() => {
+            console.log($('.div2'));
+        })
+    </script>
+</body>
+</html>

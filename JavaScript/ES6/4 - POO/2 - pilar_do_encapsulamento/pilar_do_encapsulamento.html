@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pilar do Encapsulamento</title>
+</head>
+
+<body>
+    <script>
+        class Tv {
+            constructor() {
+                //por convenção, os atributos que iniciam com underscore
+                //não devem ser acessados diretamentes
+                this._canais = [2, 4, 5, 7, 10];
+                this._canalAtivo = 5;
+                this._volume = 5;
+            }
+
+            //getters e setters
+            get canalAtivo() {
+                return this._canalAtivo
+            }
+
+            set canalAtivo(canal) {
+                if (this._canais.indexOf(canal) !== -1) {
+                    this._canalAtivo = canal;
+                }
+            }
+        }
+
+        let tv = new Tv();
+        //chamando apenas pelo nome da função sem passar os parênteses
+        //o javascript tem a inteligencia de interpletar que se trata de uma função getter ou setter
+
+        tv.canalAtivo = 7;
+        console.log(tv.canalAtivo);
+    </script>
+</body>
+
+</html>

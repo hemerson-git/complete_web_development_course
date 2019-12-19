@@ -1,0 +1,23 @@
+body {
+    background-color: #007fc7; 
+}
+
+#container {
+    background-color: #eee;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+h1 {
+    /* Não vai alterar nada, pois o posicionamento estático é o padrão do elementos */
+    position: static; 
+}
+
+.relative {
+    /* Top, bottom, right, left */
+    position: relative;
+    border: 1px solid red;
+    top: 20px;
+    left: 80px;
+}

@@ -1,0 +1,20 @@
+ul {
+    /* border: 1px solid rgba(230, 75, 37, 0.582); */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 5px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color:red;
+}
