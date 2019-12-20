@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flexbox</title>
+    <title>Flexbox - Container</title>
     <style type="text/css">
         #conteudo{
             background: #dcdcdc;
             height: 400px;
-            
+            display: flex;
+
+            /* row/row-reverse/column/column-reverse */
+
+            flex-direction: row;
+        }
+
+        .item {
+            background-color: white;
+            border: 1px solid gray;
+            height: 150px;
+            width: 150px;
+            margin: 10px;
         }
     </style>
 </head>
