@@ -26,9 +26,16 @@
 
         //Fazer calculos entre datas
         $initial_date = '2019-12-13';
+        echo "data inicial - $initial_date";
+        echo '<br/>';
         $final_date = '2019-12-25';
+        echo "data final - $final_date";
+        echo '<br/>';
         $initial_time = strtotime($initial_date);
-        echo $initial_date .' - ' .$initial_time;
+        $final_time = strtotime($final_date);
+        echo '<br/>';
+
+        echo ($final_time - $initial_time) / 86400 . ' dias de diferença entra a data inicial e final';
 
     ?>
 </body>
