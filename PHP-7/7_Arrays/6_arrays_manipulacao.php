@@ -19,9 +19,9 @@
 
         $array = ['Teclado',  'Mouse', 'Monitor', 'Cabo HDMI', 'fonte atx'];
 
-        echo '<pre>'
+        echo '<pre>';
             print_r($array);
-        echo '</pre>'
+        echo '</pre>';
 
         sort($array); //true ou false
 

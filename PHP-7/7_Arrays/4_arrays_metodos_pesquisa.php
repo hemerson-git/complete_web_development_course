@@ -12,9 +12,9 @@
     <?php
 
         $lista_frutas = ['Banana',  'Maçã', 'Uva'];
-        echo <pre>
-            print_r $lista_frutas;
-        echo </pre>
+        echo '<pre>';
+            print_r($lista_frutas);
+        echo '</pre>';
         // in_array() => retorna true ou false dependendo da existência ou não do que está sendo passado
         // array_search() => retorna o indice do valor pesquisado, caso ele exista
 

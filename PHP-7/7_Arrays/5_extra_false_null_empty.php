@@ -17,33 +17,33 @@
 
         // valores null
         if($is_null($funcionario1)) {
-            echo sim, funcionario é null;
+            echo 'sim, funcionario é null';
         } else {
-            echo não,o funcionario não é null;
+            echo 'não,o funcionario não é null';
         }
 
-        echo '<br />'
+        echo '<br />';
 
         if(is_null($funcionario2)) {
-            echo sim, a variável é null;
+            echo 'sim, a variável é null';
         } else {
-            echo não, a variável não é null;
+            echo 'não, a variável não é null';
         }
 
-        echo '<hr />'
+        echo '<hr />';
 
         // valores vazios
         if(empty($funcionario1)) {
-            echo sim, a variável está vazia;
+            echo 'sim, a variável está vazia';
         } else {
-            echo não, a variável não está vazia;
+            echo 'não, a variável não está vazia';
         }
         
-        echo '<br />'
+        echo '<br />';
         if(empty($funcionario2)) {
-            echo sim, a variável está vazia;
+            echo 'sim, a variável está vazia';
         } else {
-            echo não, a variável não está vazia;
+            echo 'não, a variável não está vazia';
         }
 
         ?>
