@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox - Container</title>
+    <style type="text/css">
+        #conteudo {
+            background: #dcdcdc;
+            height: 600px;
+            display: flex;
+        }
+
+        .item {
+            background-color: white;
+            border: 1px solid gray;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+
+            /* Define a proporçao de espaço ocupado por um item */
+            flex-grow: 0;
+        }
+
+        .item1 {
+            flex-grow: 1;
+        }
+
+        .ordem-1 {
+            order: 1;
+        }
+
+        .ordem-2 {
+            order: 2;
+        }
+
+        .ordem-3 {
+            order: 3;
+        }
+
+        .ordem-4 {
+            order: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteudo">
+        <div class="item ordem-3 item1">item 01</div>
+        <div class="item ordem-4">item 02</div>
+        <div class="item ordem-1">item 03</div>
+        <div class="item ordem-2">item 04</div>
+    </div>
+</body>
+
+</html>
