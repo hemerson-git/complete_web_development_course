@@ -1,10 +1,6 @@
 <?php
   session_start();
 
-  $error = false;
-  $no_permition = false;
-
-
   if(isset($_GET['login']) && $_GET['login'] === 'erro') {
     $error = true;
   }
@@ -64,7 +60,7 @@
                 <?php }?>
 
                 <!-- Mensagem de erro - sem permição -->
-                <?php if($no_permition) {?>
+                <?php if($no_permition != false) {?>
                   <div class="text-danger text-center py-2">
                     <span>Você não tem permissão para acessar essa área</span>
                   </div>
