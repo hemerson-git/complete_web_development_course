@@ -1,0 +1,9 @@
+body, html, .bg-carousel {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.bg-carousel{
+    text-align: center;
+    background: pink;
+}
