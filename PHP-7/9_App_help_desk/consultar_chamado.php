@@ -1,5 +1,24 @@
 <?php require_once "validador_acesso.php" ?>
 
+<?php
+$items = array();
+$arquivo = fopen('arquivo.hd', 'r');
+
+  //enqueanto houver registros a serem recuperados
+  while (!feof($arquivo)) { //testa pelo fim de um arquivo
+    $registro = fgets($arquivo);
+
+    //verifica se o registro contém os três campos( descrição, titule e tipo)
+    if(count(explode('#', $registro)) < 3){
+      continue;
+    }
+    $items[] = explode('#', $registro);
+  }
+
+  //fecha o arquivo aberto anteriormente
+  fclose($arquivo);
+?>
+
 <html>
 
 <head>
@@ -43,23 +62,18 @@
 
           <div class="card-body">
 
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
+            <?php foreach($items as $chamado) { ?>
 
+              <div class="card mb-3 bg-light">
+                <div class="card-body">
+                  <h5 class="card-title"><?=$chamado[0]?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$chamado[1]?></h6>
+                  <p class="card-text"><?=$chamado[2]?></p>
+
+                </div>
               </div>
-            </div>
 
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title">Título do chamado...</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                <p class="card-text">Descrição do chamado...</p>
-
-              </div>
-            </div>
+            <?php }?>
 
             <div class="row mt-5">
               <div class="col-6">
