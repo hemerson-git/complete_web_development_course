@@ -1,4 +1,4 @@
-<?php require_once "validador_acesso.php" ?>
+<?php require_once "validador_acesso.php"?>
 
 <?php
 $items = array();
@@ -64,14 +64,23 @@ $arquivo = fopen('arquivo.hd', 'r');
 
             <?php foreach($items as $chamado) { ?>
 
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title"><?=$chamado[0]?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?=$chamado[1]?></h6>
-                  <p class="card-text"><?=$chamado[2]?></p>
+            <?php
+            //Verifica se o perfil do usuário não é administrativo
+            if($_SESSION['perfil_id'] == 'Usuário') {
+              if ($chamado[count($chamado) - 1] != $_SESSION['user_id']) {
+                continue;
+              }
+            }
+            ?>
 
-                </div>
+            <div class="card mb-3 bg-light">
+              <div class="card-body">
+                <h5 class="card-title"><?=$chamado[0]?></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><?=$chamado[1]?></h6>
+                <p class="card-text"><?=$chamado[2]?></p>
+
               </div>
+            </div>
 
             <?php }?>
 
