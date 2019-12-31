@@ -12,6 +12,14 @@ $arquivo = fopen('arquivo.hd', 'r');
     if(count(explode('#', $registro)) < 3){
       continue;
     }
+
+    if($_SESSION['perfil_id'] == 'Usuário') {
+      $reg[0] = explode('#', $registro);
+      if ($reg[0][3] != $_SESSION['user_id']) {
+        continue;
+      }
+    }
+
     $items[] = explode('#', $registro);
   }
 
@@ -63,15 +71,6 @@ $arquivo = fopen('arquivo.hd', 'r');
           <div class="card-body">
 
             <?php foreach($items as $chamado) { ?>
-
-            <?php
-            //Verifica se o perfil do usuário não é administrativo
-            if($_SESSION['perfil_id'] == 'Usuário') {
-              if ($chamado[count($chamado) - 1] != $_SESSION['user_id']) {
-                continue;
-              }
-            }
-            ?>
 
             <div class="card mb-3 bg-light">
               <div class="card-body">
