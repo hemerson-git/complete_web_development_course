@@ -2,7 +2,7 @@
 
 <?php
 $items = array();
-$arquivo = fopen('arquivo.hd', 'r');
+$arquivo = fopen('../../../app_help_desk/arquivo.hd', 'r');
 
   //enqueanto houver registros a serem recuperados
   while (!feof($arquivo)) { //testa pelo fim de um arquivo
