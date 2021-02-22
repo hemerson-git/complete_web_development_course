@@ -27,7 +27,7 @@
     $users = $select->fetch(PDO::FETCH_ASSOC);
 
     //FETCH_NUM => Array de Índice númerico
-    //FETCH_NAMED => Array de Índices Associativos
+    //FETCH_ASSOC => Array de Índices Associativos
     //FETCH_OBJ => Retorna em formato de objeto
     
     echo '<pre>';
