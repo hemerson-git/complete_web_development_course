@@ -42,7 +42,7 @@
     
     echo '<pre>';
         print_r($users);
-    echo '<;pre>';
+    echo '</pre>';
     
     echo $retorno;
     

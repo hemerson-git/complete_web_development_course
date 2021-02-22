@@ -20,21 +20,15 @@
     $retorno = $connection->exec($query);
 
     $query = '
-        insert into tb_usuarios(
-          nome, email, senha
-        ) values (
-          "Hemerson Oliveira", "hemerson@gmail.com", "123456"
-        )
-    ';
-
-    $retorno = $connection->exec($query);
-    
-    $query = '
-        select * from tb_usuarios
+        select * from tb_usuarios where id = 5
     ';
     
     $select = $connection->query($query);
-    $users = $select->fetchAll();
+    $users = $select->fetch(PDO::FETCH_ASSOC);
+
+    //FETCH_NUM => Array de Índice númerico
+    //FETCH_NAMED => Array de Índices Associativos
+    //FETCH_OBJ => Retorna em formato de objeto
     
     echo '<pre>';
         print_r($users);
