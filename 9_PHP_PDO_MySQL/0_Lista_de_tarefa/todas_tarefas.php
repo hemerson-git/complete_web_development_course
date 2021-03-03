@@ -1,3 +1,9 @@
+<?php
+	$action = 'recover';
+	require_once('tarefa_controller.php');
+
+?>
+
 <html>
 
 <head>

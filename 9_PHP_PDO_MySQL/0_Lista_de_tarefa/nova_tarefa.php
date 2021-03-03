@@ -5,15 +5,28 @@
 		<title>App Lista Tarefas</title>
 
 		<link rel="stylesheet" href="css/estilo.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			crossorigin="anonymous"
+		>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+			integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+			crossorigin="anonymous"
+		>
 	</head>
 
 	<body>
 		<?php
 			require_once('./blocks/navbar.php');
 		?>
-		
+
+		<?php if(isset($_GET['included']) && $_GET['included'] === '1') { ?>
+			<div class="bg-success pt-2 text-white d-flex justify-content-center">
+				<h5>Tarefa Inserida com Sucesso!!!</h5>
+			</div>
+		<?php }?>
+
 		<div class="container app">
 			<div class="row">
 				<div class="col-md-3 menu">
@@ -31,10 +44,16 @@
 								<h4>Nova tarefa</h4>
 								<hr />
 
-								<form>
+								<form action="./tarefa_controller.php?action=insert" method="POST">
 									<div class="form-group">
-										<label>Descrição da tarefa:</label>
-										<input type="text" class="form-control" placeholder="Exemplo: Lavar o carro">
+										<label for="task">Descrição da tarefa:</label>
+										<input 
+											type="text" 
+											class="form-control" 
+											name="task" 
+											id="task"
+											placeholder="Exemplo: Lavar o carro"
+										>
 									</div>
 
 									<button class="btn btn-success">Cadastrar</button>
