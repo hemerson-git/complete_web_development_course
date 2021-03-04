@@ -2,23 +2,27 @@
   require('./private/tarefa.model.php');
   require('./private/tarefa.service.php');
   require('./private/conexao.php');
-
-  echo '<pre>';
-    print_r($_POST);
-  echo '</pre>';
-
   
-  if (isset($_GET['action']) && $_GET['action']) {
-    $task = new Task();
-    $task->__set('task', $_POST['task']);
-    
-    $connection = new Connection();
+  $action = isset($_GET['action']) ? $_GET['action'] : $action;
   
-    $taskService = new TaskService($connection, $task);
-    $taskService->insert();
+  $connection = new Connection();
+  $task = new Task();
+  
+  switch ($action) {
+    case 'insert':
+      $task->__set('task', $_POST['task']);
+      
+      $taskService = new TaskService($connection, $task);
+      $taskService->insert();
+
+      header('Location: index.php?included=1');
+
+      break;
+    case 'recover':
+      $taskService = new TaskService($connection, $task);
+      $tasks = $taskService->index();
+
+      break; 
   }
   
-
-
-  header('Location: nova_tarefa.php?included=1');
 ?>

@@ -17,7 +17,21 @@
     }
 
     public function index() { //read
+      $query = '
+        SELECT a.id, a.tarefa, b.status 
+        FROM tb_tarefas a
+        LEFT JOIN tb_status b ON a.id_status = b.id
+      ';
+      $stmt = $this->connection->prepare($query);
+      $stmt->execute();
       
+      $tasks = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+      return $tasks;
+    }
+
+    public function show() { //read
+      // $query select
     }
 
     public function update() { //update
